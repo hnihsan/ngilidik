@@ -12,10 +12,19 @@ function generate(text){
     return result;
 }
 
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip({
+        trigger : "click",
+        delay: { "hide": 100 }
+    })
+  });
+
 $("#copy-btn").click(function(){
     var result = $('#result-block').html();
     navigator.clipboard.writeText(result).then(function() {
-        console.log('copied')
+        setTimeout(function() {
+            $('#copy-btn').tooltip('hide')
+        }, 2000);
       }, function() {
         /* clipboard write failed */
       });
