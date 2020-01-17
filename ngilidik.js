@@ -40,8 +40,8 @@ $('#generate').click(function(){
 
 $('#audio').click(function(){
     var msg = new SpeechSynthesisUtterance();
-    var voices = window.speechSynthesis.getVoices();
-    msg.voice = voices[8]; // Indonesia
+    msg.lang = "id";
+    msg.voiceURI = "urn:moz-tts:speechd:Indonesian?id";
     msg.text = $('#result-block').html();
     msg.rate = 0.8; // 0.1 to 10
     speechSynthesis.speak(msg);
