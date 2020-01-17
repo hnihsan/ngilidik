@@ -1,10 +1,49 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>
       Ngilidik Kiy !
     </title>
   </head>
   <body>
-    <h1> Testing </h1>
+    <div class="containter p-4">
+      <div class="row mb-2">
+        <div class="col-12 text-center">
+          <h1>Ngilidik Kiy !</h1>
+          <h3 class="text-muted">Kirini Miriki Pintis Dilidik.</h3>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="form-group col-sm-12">
+          <label for="source text-center">Enter text here</label>
+          <textarea class="form-control cliptext" id="source" rows="3 "></textarea>
+        </div>
+        <div class="col-sm-12 text-center">
+          <button id="generate" class="btn btn-primary">Generate</button>
+        </div>
+      </div>
+
+      <div class="row result d-none">
+        <div class="col-sm-12">
+          <blockquote class="blockquote border p-2">
+            <p id="result-block" class="mb-0">Result Here</p>
+          </blockquote>
+          <input class="d-none" id="result-input">
+        </div>
+        <div class="col-12">
+          <button id="copy-btn" class="btn btn-primary" data-clipboard-target="#result-input">
+            <i class="material-icons">file_copy</i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="ngilidik.js"></script>
   </body>
 </html>
